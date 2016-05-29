@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+<div class="container">
+<form name="cadastroPedido" method="POST">
+<center><h2 class="form-signin-heading">pedido</h2></center>
+
+<fieldset>
+<legend><label>Item:</label></legend>
+
+<h4 class="form-signin-heading">Selecione o Produto: </h4><br>
+
+<label for="inputQuant" class="sr-only">Quantidade</label>
+        <input type="text" id="inputQuant" class="form-control" placeholder="Quantidade" required autofocus>
+		<br>
+
+<label for="inputValor" class="sr-only">Valor</label>
+        <input type="text" id="inputValor" class="form-control" placeholder="Valor" required autofocus>
+		<br>	
+	
+</fieldset>
+<fieldset>
+<legend><label>Configuração:</label></legend>
+
+<label for="inputQuant_parcelas" class="sr-only">Quantidade de Parcelas</label>
+        <input type="text" id="inputQuant_parcelas" class="form-control" placeholder="Quantidade de Parcelas" required autofocus>
+		<br>
+	
+</fieldset>	
+
+{% endblock %}

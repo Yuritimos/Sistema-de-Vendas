@@ -1,0 +1,105 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+<div class="container">
+
+<form name="cadastroCliente" method="POST">
+<center><h2 class="form-signin-heading">Cadastro de Fornecedor</h2></center>
+<h3 class="form-signin-heading">Dados Pessoais</h3>
+<center><img src="{% static 'login.png' %}" class="img-circle" width="250px" height="150px"></center> <br>
+<fieldset>
+<legend><label>Documento:</label></legend>
+<label for="inputNome" class="sr-only">Nome completo</label>
+        <input type="text" id="inputNome" class="form-control" placeholder="Nome Completo" required autofocus>
+		<br>
+
+<label for="inputNum" class="sr-only">Numero</label>
+        <input type="text" id="inputNum" class="form-control" placeholder="Numero" required autofocus>
+		<br>	
+
+<label for="inputTipo" class="sr-only">Tipo</label>
+        <input type="text" id="inputTipo" class="form-control" placeholder="Tipo" required autofocus>
+		<br>
+
+<label for="inputEmissao" class="sr-only">Data de emissão</label>
+        <input type="text" id="inputEmissao" class="form-control" placeholder="Data de emissão" required autofocus>
+		<br>
+
+<h4 class="form-signin-heading">Ativo :</h4>		
+<div class="radio">
+        <label><input type="radio" name="escolha" value="Sim">Sim</label>
+</div>
+<div class="radio">
+        <label><input type="radio" name="escolha" value="Não">Não</label>
+</div>
+	
+</fieldset>	
+
+<fieldset>
+
+<legend><label>Endereço:</label></legend>
+<label for="inputCep" class="sr-only">Cep</label>
+        <input type="text" id="inputCep" class="form-control" placeholder="Cep" required autofocus>
+		<br>	
+
+<label for="inputTipo" class="sr-only">Tipo</label>
+        <input type="text" id="inputTipo" class="form-control" placeholder="Tipo" required autofocus>
+		<br>
+
+<label for="inputDescricao" class="sr-only">Descrição</label>
+        <input type="text" id="inputDescricao" class="form-control" placeholder="Descrição" required autofocus>
+		<br>
+		
+<label for="inputComplemento" class="sr-only">Complemento</label>
+        <input type="text" id="inputComplemento" class="form-control" placeholder="Complemento" required autofocus>
+		<br>
+		
+<label for="inputNum" class="sr-only">Numero</label>
+        <input type="text" id="inputNum" class="form-control" placeholder="Numero" required autofocus>
+		<br>	
+		
+<h4 class="form-signin-heading">Ativo :</h4>		
+<div class="radio">
+        <label><input type="radio" name="escolha" value="Sim">Sim</label>
+</div>
+<div class="radio">
+        <label><input type="radio" name="escolha" value="Não">Não</label>
+</div>
+</fieldset>
+
+<fieldset>
+
+<legend><label>Contatos:</label></legend>
+<h4 class="form-signin-heading">Email: </h4>
+<label for="inputDescricao" class="sr-only">Descrição</label>
+        <input type="text" id="inputDescricao" class="form-control" placeholder="Descrição" required autofocus>
+		<br>
+
+<h4 class="form-signin-heading">Ativo :</h4>		
+<div class="radio">
+        <label><input type="radio" name="escolha" value="Sim">Sim</label>
+</div>
+<div class="radio">
+        <label><input type="radio" name="escolha" value="Não">Não</label>
+</div>		
+		
+<h4 class="form-signin-heading">Telefone: </h4>
+<label for="inputTelefone" class="sr-only">Telefone</label>
+        <input type="text" id="inputTelefone" class="form-control" placeholder="Telefone" required autofocus>
+		<br>
+		
+</fieldset>
+
+<fieldset>
+<legend><label>Lista de produto:</label></legend>
+
+<div class="list-group">
+  <a href="#" class="list-group-item active">Produtos</a>
+</div>
+
+</fieldset>
+
+
+<button type="submit" class="btn btn-lg btn-primary" >Cadastrar</button>
+</form>
+{% endblock %}

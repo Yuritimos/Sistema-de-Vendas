@@ -1,0 +1,18 @@
+{% extends 'base_usuarios.html' %}
+{% load staticfiles %}
+{% block content %}
+<div class="container">
+      <form class="form-signin" method="POST" action="usuario.html">{% csrf_token %}
+        <h2 class="form-signin-heading">Entrar no Sistema</h2>
+        <label for="inputEmail" class="sr-only">Email</label>
+        <input type="email" id="inputEmail" name="email" class="form-control" placeholder="Email " required autofocus>
+		<br>
+        <label for="inputPassword" class="sr-only">Senha</label>
+        <input type="password" id="inputPassword" class="form-control" placeholder="Senha" required>
+		<br>
+        <button type="submit" class="btn btn-lg btn-primary" >Entrar</button>
+      </form>
+
+    </div> <!-- /container -->
+   <br>
+  {% endblock %}

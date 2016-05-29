@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+<div class="container">
+
+<form name="cadastroProduto" method="POST">
+<fieldset>
+<legend><label>Produto:</label></legend>
+
+<h4 class="form-signin-heading">Selecione a foto: </h4><br>
+<center><img src="{% static 'venda.png' %}" width="250px" height="150px"></center> <br>
+
+<label for="inputDescricao" class="sr-only">Descrição</label>
+        <input type="text" id="inputDescricao" class="form-control" placeholder="Descrição" required autofocus>
+		<br>
+		
+<label for="inputEstoque" class="sr-only">Estoque</label>
+        <input type="text" id="inputEstoque" class="form-control" placeholder="Estoque" required autofocus>
+		<br>	
+
+		
+</fieldset>
+
+<button type="submit" class="btn btn-lg btn-primary" >Cadastrar</button>
+<form>
+{% endblock %}

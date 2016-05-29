@@ -1,0 +1,74 @@
+{% extends 'base.html' %}
+{% load staticfiles %}
+{% block content %}
+<div class="container">
+<form name="cadastroVenda" method="POST">
+<center><h2 class="form-signin-heading">Venda</h2></center>
+
+<fieldset>
+<legend><label>Unidade:</label></legend>
+
+<label for="inputDescricao" class="sr-only">Descrição</label>
+        <input type="text" id="inputDescricao" class="form-control" placeholder="Descrição" required autofocus>
+		<br>
+
+<label for="inputFator" class="sr-only">Fator</label>
+        <input type="text" id="inputFator" class="form-control" placeholder="Fator" required autofocus>
+		<br>	
+	
+</fieldset>	
+
+<fieldset>
+<legend><label>Item:</label></legend>
+
+
+<h4 class="form-signin-heading">Selecione o Produto: </h4><br>
+
+<label for="inputQuant" class="sr-only">Quantidade</label>
+        <input type="text" id="inputQuant" class="form-control" placeholder="Quantidade" required autofocus>
+		<br>
+
+<label for="inputValor" class="sr-only">Valor</label>
+        <input type="text" id="inputValor" class="form-control" placeholder="Valor" required autofocus>
+		<br>	
+	
+</fieldset>
+<fieldset>
+<legend><label>Configuração:</label></legend>
+
+<label for="inputQuant_parcelas" class="sr-only">Quantidade de Parcelas</label>
+        <input type="text" id="inputQuant_parcelas" class="form-control" placeholder="Quantidade de Parcelas" required autofocus>
+		<br>
+	
+</fieldset>	
+
+<fieldset>
+<legend><label>Financeiro:</label></legend>
+
+<h4 class="form-signin-heading">Entidade :</h4>		
+<div class="radio">
+        <label><input type="radio" name="escolha" value="C">Cliente</label>
+</div>
+<div class="radio">
+        <label><input type="radio" name="escolha" value="F">Fornecedor</label>
+</div>
+
+<label for="inputValor" class="sr-only">Valor</label>
+        <input type="text" id="inputValor" class="form-control" placeholder="Valor" required autofocus>
+		<br>
+
+<label for="inputDesconto" class="sr-only">Desconto</label>
+        <input type="text" id="inputDesconto" class="form-control" placeholder="Desconto" required autofocus>
+		<br>		
+
+<label for="inputValor_pago" class="sr-only">Valor Pago</label>
+        <input type="text" id="inputValor_pago" class="form-control" placeholder="Valor Pago" required autofocus>
+		<br>
+		
+		
+</fieldset>	
+
+<button type="submit" class="btn btn-lg btn-primary" >Cadastrar</button>
+<form>
+
+{% endblock %}
